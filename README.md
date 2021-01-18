@@ -1,2 +1,5 @@
 # Castoreum
-Customizable code snippet for solving tests on [לילך תאוריה](https://testli.co.il)
+Short code snippet for solving tests on [לילך תאוריה](https://testli.co.il)
+
+
+100% Compatible with Google Chrome.
