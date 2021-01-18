@@ -1,2 +1,2 @@
 # Castoreum
-Customizable code snippet for solving tests on testli.co.il (aka לילך תאוריה)
+Customizable code snippet for solving tests on [לילך תאוריה](https://testli.co.il)
