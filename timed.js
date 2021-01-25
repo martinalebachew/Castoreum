@@ -41,3 +41,5 @@ function timedExec() {
     else castoreum_endTest();
   }, t2+t3)
 }
+
+timedExec();
