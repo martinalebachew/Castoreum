@@ -1,5 +1,5 @@
-const castoreum_sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 var castoreum_testLength = document.getElementsByClassName("qLength")[0].innerHTML;
+var t1 = 3000 + Math.random() * 1000;
 
 function castoreum_clickAnswer() {
   var castoreum_COLLECTION = document.getElementsByClassName("activeQ")[0].getElementsByClassName("ansWrap")[0].children;
@@ -26,17 +26,18 @@ function castoreum_endTest() {
   castoreum_endButton.click();
 }
 
-
 var castoreum_last = false;
 
-while (!castoreum_last) {
+function timedExec() {
   var castoreum_QNUM = document.getElementsByClassName("activeQcnt")[0].innerHTML;
   castoreum_last = (parseInt(castoreum_QNUM, 10) == parseInt(castoreum_testLength, 10));
-  await castoreum_sleep(7000 + Math.random() * 1000);
-  castoreum_clickAnswer();
-  await castoreum_sleep(2000 + Math.random() * 1000);
-  castoreum_nextQuestion();
-}
+  var t2 = 7000 + Math.random() * 1000;
+  var t3 = 2000 + Math.random() * 1000;
+  setTimeout(castoreum_clickAnswer, t2);
+  setTimeout(castoreum_nextQuestion, t2 + t3);
 
-await sleep(3000 + Math.random() * 1000);
-castoreum_endTest();
+  setTimeout(function(){
+    if (!castoreum_last) timedExec();
+    else castoreum_endTest();
+  }, t2+t3)
+}
