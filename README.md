@@ -1,5 +1,2 @@
-# Castoreum
-Short code snippet for solving tests on [לילך תאוריה](https://testli.co.il)
-
-
-100% Compatible with Google Chrome.
+# Castoreum 🚘
+JavaScript code snippets for solving driving theory tests on [testli.co.il](https://testli.co.il), only using the DevTools Console.
